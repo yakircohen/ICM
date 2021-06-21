@@ -4,14 +4,14 @@ Braude Information Systems Change Management (students project)
 
 ## Client Side
 ### Login:
-![Login](https://github.com/RonRaifer/ICM/blob/master/LoginScreen.png)
+![Login](https://github.com/yakircohen/ICM/blob/main/LoginScreen.png)
 ### Adding New Request:
-![New Request](https://github.com/RonRaifer/ICM/blob/master/NewRequest.png)
+![New Request](https://github.com/yakircohen/ICM/blob/main/NewRequest.png)
 ### Process Requests:
-![New Request](https://github.com/RonRaifer/ICM/blob/master/ProcessRequests.png)
+![New Request](https://github.com/yakircohen/ICM/blob/main/ProcessRequests.png)
 
 ## Server Side
-![Server Side](https://github.com/RonRaifer/ICM/blob/master/ServerSide.png)
+![Server Side](https://github.com/yakircohen/ICM/blob/main/ServerSide.png)
 
 # Usage
 1. Download 
@@ -27,4 +27,4 @@ java -jar G11_client.jar
 ```
 6. Login
 
-For more details, contact me at Ronraifer@gmail.com
+For more details, contact me at yakircohen320@gmail.com
