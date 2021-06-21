@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="712.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewRequestController">
+   <children>
+      <AnchorPane layoutX="17.0" prefHeight="85.0" prefWidth="201.0">
+         <children>
+            <Label layoutX="14.0" layoutY="60.0" prefHeight="17.0" prefWidth="41.0" text="ICM &gt; " textFill="#868686">
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="lblPageName" layoutX="12.0" layoutY="14.0" text="New Request" textFill="DARKSLATEGRAY">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPageNavigationName" layoutX="47.0" layoutY="60.0" text="New Request" textFill="#868686">
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TitledPane collapsible="false" contentDisplay="BOTTOM" layoutX="33.0" layoutY="103.0" prefHeight="508.0" prefWidth="747.0" style="-fx-background-color: white;" text="Create a New Request">
+         <content>
+            <AnchorPane prefHeight="516.0" prefWidth="745.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="tbState" layoutX="18.0" layoutY="83.0" prefHeight="31.0" prefWidth="709.0" promptText="Type here the current situation issued about" />
+                  <Button fx:id="btnCreate" layoutX="21.0" layoutY="475.0" mnemonicParsing="false" onAction="#createClick" text="Create" textFill="#03bc00" />
+                  <Button fx:id="btnClear" layoutX="682.0" layoutY="475.0" mnemonicParsing="false" onAction="#clearClick" text="Clear" />
+                  <Label layoutX="18.0" layoutY="14.0" text="Relevant System:" />
+                  <Label layoutX="18.0" layoutY="66.0" text="Current State:" />
+                  <TextField fx:id="tbChange" layoutX="19.0" layoutY="140.0" prefHeight="31.0" prefWidth="710.0" promptText="Type here the change you request" />
+                  <Label layoutX="19.0" layoutY="123.0" text="Change Requested:" />
+                  <TextArea fx:id="tbReason" layoutX="20.0" layoutY="196.0" prefHeight="65.0" prefWidth="710.0" promptText="Type here the reason for the change" />
+                  <Label layoutX="22.0" layoutY="179.0" text="Reason For The Change:" />
+                  <TextArea fx:id="tbComment" layoutX="20.0" layoutY="289.0" prefHeight="65.0" prefWidth="714.0" promptText="Type here comments (optional)" />
+                  <Label layoutX="21.0" layoutY="272.0" text="Comment:" />
+                  <Label layoutX="82.0" layoutY="272.0" text="(optional)" textFill="#727272" />
+                  <Pane fx:id="paneFile" layoutX="21.0" layoutY="377.0" prefHeight="85.0" prefWidth="716.0" style="-fx-border-color: #C1C1C1;">
+                     <children>
+                        <Button fx:id="btnFile" layoutX="10.0" layoutY="6.0" mnemonicParsing="false" onAction="#fileClick" text="Choose Files" />
+                        <TextArea fx:id="taFiles" layoutX="108.0" layoutY="3.0" prefHeight="79.0" prefWidth="605.0" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="20.0" layoutY="360.0" text="Attach Files:" />
+                  <Label layoutX="91.0" layoutY="360.0" text="(optional)" textFill="#727272" />
+                  <Label layoutX="573.0" layoutY="14.0" text="Issued Date:" />
+                  <Label fx:id="lblDate" layoutX="644.0" layoutY="14.0" text="21/12/2019" />
+                  <Label fx:id="lblError" layoutX="222.0" layoutY="480.0" text="Woops!, The fields marked with red can not be empty" textFill="#f50707">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbSystem" layoutX="16.0" layoutY="31.0" prefWidth="150.0" promptText="choose system" />
+                  	
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="Arial Italic" size="15.0" />
+         </font>
+      </TitledPane>
+   </children>
+</AnchorPane>

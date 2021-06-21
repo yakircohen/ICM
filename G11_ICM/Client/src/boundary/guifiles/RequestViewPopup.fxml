@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RequestViewController">
+   <top>
+      <VBox prefHeight="51.0" prefWidth="883.0" style="-fx-background-color: #2F4F4F;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="52.0" prefWidth="883.0">
+               <left>
+                  <ImageView fitHeight="65.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@img/logoWhite.png" />
+                     </image>
+                  </ImageView>
+               </left>
+            </BorderPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="apCenterContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="30.0" layoutY="32.0" text="Request ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRequestID" layoutX="99.0" layoutY="32.0" text="id" />
+            <TextField fx:id="tbState" editable="false" focusTraversable="false" layoutX="27.0" layoutY="76.0" prefHeight="31.0" prefWidth="565.0" />
+            <Label layoutX="242.0" layoutY="32.0" text="Relevant System:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="59.0" text="Current State:" />
+            <TextField fx:id="tbChange" editable="false" focusTraversable="false" layoutX="27.0" layoutY="142.0" prefHeight="31.0" prefWidth="565.0" />
+            <Label layoutX="30.0" layoutY="125.0" text="Change Requested:" />
+            <TextArea fx:id="tbReason" editable="false" focusTraversable="false" layoutX="27.0" layoutY="208.0" prefHeight="65.0" prefWidth="565.0" wrapText="true" />
+            <Label layoutX="27.0" layoutY="191.0" text="Reason For The Change:" />
+            <TextArea fx:id="tbComment" editable="false" focusTraversable="false" layoutX="27.0" layoutY="305.0" prefHeight="65.0" prefWidth="565.0" text="No Comments" wrapText="true" />
+            <Label layoutX="27.0" layoutY="288.0" text="Comments:" />
+            <Label layoutX="457.0" layoutY="32.0" text="Date Issued:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="530.0" layoutY="32.0" text="21/12/2019" />
+            <Label fx:id="lblSystem" layoutX="341.0" layoutY="32.0" text="system" />
+            <Label layoutX="134.0" layoutY="32.0" text="User ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUserID" layoutX="185.0" layoutY="32.0" text="id" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>
