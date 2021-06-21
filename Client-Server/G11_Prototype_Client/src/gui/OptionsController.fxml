@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.OptionsController">
+   <children>
+      <Button fx:id="btnApply" layoutX="175.0" layoutY="107.0" mnemonicParsing="false" onAction="#onApplyClick" prefHeight="26.0" prefWidth="62.0" text="Apply" />
+      <Button fx:id="btnCancel" layoutX="101.0" layoutY="107.0" mnemonicParsing="false" onAction="#onBackClick" prefHeight="26.0" prefWidth="62.0" text="Back" />
+      <TextField fx:id="tbIp" layoutX="57.0" layoutY="65.0" promptText="IP Address" />
+      <TextField fx:id="tbPort" layoutX="216.0" layoutY="65.0" prefHeight="25.0" prefWidth="62.0" promptText="Port" />
+      <Label layoutX="79.0" layoutY="23.0" text="Change Server Address" textFill="#2d06f2">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
