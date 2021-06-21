@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PerformanceReportPopupController">
+   <top>
+      <VBox prefHeight="52.0" prefWidth="618.0" style="-fx-background-color: #2F4F4F;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <ImageView fitHeight="65.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@img/logoWhite.png" />
+                     </image>
+                  </ImageView>
+               </left>
+            </BorderPane>
+         </children></VBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="39.0" layoutY="22.0" text="Duration of approved extensions:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="durationApprovedExtensions" layoutX="238.0" layoutY="22.0" text="total time of approved extensions" />
+            <Label layoutX="39.0" layoutY="56.0" text="Duration of activity time added:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="durationActivityTimeAdded" layoutX="238.0" layoutY="56.0" text="total time of activity added" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

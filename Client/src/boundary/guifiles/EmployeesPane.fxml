@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="701.0" prefWidth="1308.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeesController">
+   <children>
+      <AnchorPane layoutX="17.0" prefHeight="85.0" prefWidth="201.0">
+         <children>
+            <Label layoutX="14.0" layoutY="60.0" prefHeight="17.0" prefWidth="41.0" text="ICM &gt; " textFill="#868686">
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="lblPageName" layoutX="12.0" layoutY="14.0" text="Employees" textFill="DARKSLATEGRAY">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPageNavigationName" layoutX="47.0" layoutY="60.0" text="Employees" textFill="#868686">
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="32.0" layoutY="105.0" prefHeight="576.0" prefWidth="1234.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabAttach" onSelectionChanged="#onTabAttachSelect" text="Department Attach">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="569.0" prefWidth="1234.0" style="-fx-background-color: white;">
+                     <children>
+                        <TitledPane fx:id="paneInSide" animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="666.0" text="Employees At Information Technology Department">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblEmployees" editable="true" layoutX="19.6" layoutY="19.6" prefHeight="475.0" prefWidth="635.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_id" prefWidth="72.00000154972076" resizable="false" sortable="false" text="ID" />
+                                        <TableColumn fx:id="col_name" prefWidth="107.99996185302734" resizable="false" text="Name" />
+                                          <TableColumn fx:id="col_lastName" prefWidth="139.79996948242183" resizable="false" text="Last Name" />
+                                          <TableColumn fx:id="col_role" prefWidth="143.99993896484375" resizable="false" text="Role" />
+                                          <TableColumn fx:id="col_options" prefWidth="174.5999999999999" sortable="false" text="Options" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane fx:id="paneOutSide" animated="false" collapsible="false" layoutX="719.0" layoutY="14.0" prefHeight="474.0" prefWidth="496.0" text="Outside Information Technology Department">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblToAdd" editable="true" prefHeight="480.0" prefWidth="442.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_idToAdd" prefWidth="72.00000154972076" resizable="false" sortable="false" text="ID" />
+                                          <TableColumn fx:id="col_nameToAdd" prefWidth="107.99996185302734" resizable="false" text="Name" />
+                                          <TableColumn fx:id="col_lastNameToAdd" prefWidth="139.79996948242183" resizable="false" text="Last Name" />
+                                          <TableColumn fx:id="col_optionsToAdd" prefWidth="149.0" sortable="false" text="Options" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </TitledPane>
+                        <Button fx:id="btnUpdate" layoutX="14.0" layoutY="498.0" mnemonicParsing="false" onAction="#onUpdateDepartmentClick" prefHeight="30.0" prefWidth="171.0" text="Update Department">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Pane fx:id="pMsg" layoutX="192.0" layoutY="497.0" prefHeight="36.0" prefWidth="386.0">
+                           <children>
+                              <Label fx:id="lblMsg" alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" text="Label" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabPermissions" onSelectionChanged="#onTabPermissionsSelect" text="Employees Permissions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TitledPane fx:id="panePermission" animated="false" collapsible="false" layoutX="22.0" layoutY="7.0" prefHeight="535.0" prefWidth="668.0" text="Employees With Roles">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="666.0">
+                                 <children>
+                                    <TableView fx:id="tblEmployeesWithRoles" editable="true" layoutX="19.6" layoutY="19.6" prefHeight="480.0" prefWidth="491.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_empID" prefWidth="72.00000154972076" resizable="false" sortable="false" text="ID" />
+                                          <TableColumn fx:id="col_empFirstName" prefWidth="107.99996185302734" resizable="false" text="Name" />
+                                          <TableColumn fx:id="col_empLastName" prefWidth="139.79996948242183" resizable="false" text="Last Name" />
+                                          <TableColumn fx:id="col_empEmail" prefWidth="143.99993896484375" resizable="false" text="Email" />
+                                          <TableColumn fx:id="col_empRole" prefWidth="174.5999999999999" sortable="false" text="Role" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="709.0" layoutY="7.0" prefHeight="73.0" prefWidth="522.0" text="Manager">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="15.0" text="ID: " />
+                                    <Label layoutX="91.0" layoutY="15.0" text="First Name:" />
+                                    <Label layoutX="217.0" layoutY="15.0" text="Last Name:" />
+                                    <Label layoutX="358.0" layoutY="15.0" text="Email:" />
+                                    <Label fx:id="lblManID" layoutX="32.0" layoutY="15.0" text="ID: " />
+                                    <Label fx:id="lblManName" layoutX="153.0" layoutY="16.0" text="ID: " />
+                                    <Label fx:id="lblManLast" layoutX="279.0" layoutY="16.0" text="ID: " />
+                                    <Label fx:id="lblManEmail" layoutX="391.0" layoutY="15.0" text="ID: " />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" animated="false" collapsible="false" contentDisplay="RIGHT" layoutX="709.0" layoutY="87.0" prefHeight="85.0" prefWidth="522.0" text="Inspector">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="10.0" text="ID: " />
+                                    <Label layoutX="89.0" layoutY="10.0" text="First Name:" />
+                                    <Label layoutX="215.0" layoutY="10.0" text="Last Name:" />
+                                    <Label layoutX="356.0" layoutY="11.0" text="Email:" />
+                                    <Hyperlink fx:id="hlReplaceIns" layoutX="9.0" layoutY="28.0" onAction="#onRepInspector" text="Replace" underline="true" />
+                                    <Label fx:id="lblInsID" layoutX="29.0" layoutY="10.0" text="ID: " />
+                                    <Label fx:id="lblInsName" layoutX="150.0" layoutY="11.0" text="ID: " />
+                                    <Label fx:id="lblInsLast" layoutX="277.0" layoutY="11.0" text="ID: " />
+                                    <Label fx:id="lblInsEmail" layoutX="388.0" layoutY="11.0" text="ID: " />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="709.0" layoutY="178.0" prefHeight="213.0" prefWidth="524.0" text="Systems">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblSystems" layoutX="19.6" layoutY="19.6" prefHeight="187.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_SysName" prefWidth="106.00000154972076" resizable="false" text="System Name" />
+                                        <TableColumn fx:id="col_Sys_ID" prefWidth="84.99999237060547" resizable="false" text="ID" />
+                                          <TableColumn fx:id="col_Sys_Name" prefWidth="90.0" resizable="false" text="FirstName" />
+                                          <TableColumn fx:id="col_Sys_Last" prefWidth="89.0" resizable="false" text="LastName" />
+                                          <TableColumn fx:id="col_Sys_Options" maxWidth="1.7976931348623157E308" prefWidth="128.0" resizable="false" text="Options" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="709.0" layoutY="394.0" prefHeight="151.0" prefWidth="524.0" text="Review Team">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tblReview" layoutX="47.0" layoutY="-46.0" prefHeight="113.0" prefWidth="553.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_RoleName" prefWidth="126.0" resizable="false" text="Role" />
+                                          <TableColumn fx:id="col_Role_ID" prefWidth="87.0" resizable="false" text="ID" />
+                                          <TableColumn fx:id="col_Role_Name" prefWidth="87.0" resizable="false" text="FirstName" />
+                                          <TableColumn fx:id="col_Role_Lase" prefWidth="98.0" resizable="false" text="LastName" />
+                                          <TableColumn fx:id="col_Role_Options" prefWidth="134.80003051757808" resizable="false" text="Options" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <AnchorPane fx:id="apReplacePer" layoutX="474.0" layoutY="204.0" prefHeight="140.0" prefWidth="344.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <ComboBox fx:id="cmbSelectEmp" layoutX="106.0" layoutY="58.0" prefWidth="150.0" promptText="Select" />
+                              <Label layoutX="41.0" layoutY="62.0" text="Employee:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="69.0" layoutY="28.0" text="Pick A new charge from list below" />
+                              <Button fx:id="btnAppointEmp" layoutX="26.0" layoutY="94.0" mnemonicParsing="false" onAction="#onAppointSelectedClick" text="Appoint Selected" />
+                              <Hyperlink fx:id="hlCancel" layoutX="286.0" layoutY="95.0" onAction="#onCancelClick" text="Cancel" underline="true" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <effect>
+            <Glow />
+         </effect>
+      </TabPane>
+      <AnchorPane fx:id="apLoading" layoutX="626.0" layoutY="302.0" prefHeight="93.0" prefWidth="173.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <ProgressIndicator layoutX="60.0" layoutY="10.0" />
+            <Label fx:id="lblLoader" layoutX="54.0" layoutY="65.0" text="Getting Data.." />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
