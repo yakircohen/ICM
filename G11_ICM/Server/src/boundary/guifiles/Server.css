@@ -1,0 +1,41 @@
+.info-msg {
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #2196F3, #2277B9);
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.info-req {
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #36C6D3, #27979F);
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.button {
+	-fx-background-color: transparent;
+}
+.button:hover {
+	-fx-background-color: #2F4F4F;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-weight: bold;
+	-fx-font-size: 16px;
+}
+.button:pressed {
+	-fx-background-color: #037AC9;
+}
+.btnClear {
+	-fx-background-color: transparent;
+}
+.btnClicked {
+	-fx-background-color: #2F4F4F;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-weight: bold;
+	-fx-font-size: 16px;
+}
+
+.text-area{
+-fx-control-inner-background:#000000;
+-fx-font-family: Consolas;
+-fx-highlight-fill: #00ff00;
+-fx-highlight-text-fill: #000000;
+-fx-text-fill: #00ff00; 
+-fx-text-box-border: transparent;
+-fx-focus-color: transparent;
+}
